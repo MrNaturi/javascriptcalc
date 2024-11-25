@@ -14,5 +14,5 @@
     { "id": 13, "number": "*", "isAction": true },
     { "id": 14, "number": "/", "isAction": true },
     { "id": 15, "number": "=", "isAction": true, "isEquals": true },
-    { "id": 16, "number": "C", "isAction": false, "isClear": true }
+    { "id": 16, "number": "C", "isAction": true, "isClear": true }
 ]
