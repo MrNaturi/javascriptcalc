@@ -1,0 +1,18 @@
+[
+    { "id": 1, "number": "1", "isAction": false },
+    { "id": 2, "number": "2", "isAction": false },
+    { "id": 3, "number": "3", "isAction": false },
+    { "id": 4, "number": "4", "isAction": false },
+    { "id": 5, "number": "5", "isAction": false },
+    { "id": 6, "number": "6", "isAction": false },
+    { "id": 7, "number": "7", "isAction": false },
+    { "id": 8, "number": "8", "isAction": false },
+    { "id": 9, "number": "9", "isAction": false },
+    { "id": 10, "number": "0", "isAction": false },
+    { "id": 11, "number": "+", "isAction": true },
+    { "id": 12, "number": "-", "isAction": true },
+    { "id": 13, "number": "*", "isAction": true },
+    { "id": 14, "number": "/", "isAction": true },
+    { "id": 15, "number": "=", "isAction": true, "isEquals": true },
+    { "id": 16, "number": "C", "isAction": false, "isClear": true }
+]
