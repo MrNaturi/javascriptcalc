@@ -37,8 +37,8 @@ function App() {
     }
 
     const finalResult =  tokens[0];
-    const trimmedResult = parseFloat(finalResult.toString().replace('.', '').slice(0, 9)) / 
-    Math.pow(10, Math.max(0, finalResult.toString().split('.')[1]?.length || 0));
+    const magnitude = Math.pow(10, Math.floor(Math.log10(Math.abs(finalResult))) - 8); // Adjust magnitude
+  const trimmedResult = Math.floor(finalResult / magnitude) * magnitude;
 
   return trimmedResult;
   }
