@@ -36,7 +36,9 @@ function App() {
       }
     }
 
-    return tokens[0];
+  finalResult =  tokens[0];
+    const trimmedResult = parseFloat(finalResult.toString().slice(0, 9));
+  return trimmedResult;
   }
 
   const [display, setDisplay] = useState('');
