@@ -5,26 +5,26 @@ import Display from './components/Display';
 
 function App() {
   function parseExpression(expression) {
-    const tokens = expression.split(/([+\-*/])/).map((token) => {
-      return isNaN(token) ? token : parseFloat(token);
+    const tokens = expression.split(/([+\-÷*])/).map((token) => {
+      return isNaN(token) ? (token === '÷' ? '/' : token) : parseFloat(token);
     });
+  
     for (let i = 0; i < tokens.length; i++) {
       if (tokens[i] === '*' || tokens[i] === '/') {
         const operator = tokens[i];
         const left = tokens[i - 1];
         const right = tokens[i + 1];
-
+  
         if (operator === '/' && right === 0) {
           throw new Error("Cannot divide by zero");
         }
-
+  
         const result = operator === '*' ? left * right : left / right;
         tokens.splice(i - 1, 3, result);
         i -= 1;
       }
     }
-
-    // Handling addition (+) and subtraction (-)
+  
     for (let i = 0; i < tokens.length; i++) {
       if (tokens[i] === '+' || tokens[i] === '-') {
         const operator = tokens[i];
@@ -35,13 +35,12 @@ function App() {
         i -= 1;
       }
     }
-
-    const finalResult =  tokens[0];
-    const magnitude = Math.pow(10, Math.floor(Math.log10(Math.abs(finalResult))) - 8); // Adjust magnitude
-  const trimmedResult = Math.floor(finalResult / magnitude) * magnitude;
-
-  return trimmedResult;
+  
+    const finalResult = tokens[0];
+    const roundedResult = Math.round(finalResult * 1e8) / 1e8; // 8 decimal precision
+    return roundedResult.toLocaleString();
   }
+  
 
   const [display, setDisplay] = useState('');
   const [result, setResult] = useState(false);
