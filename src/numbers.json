@@ -12,7 +12,7 @@
     { "id": 11, "number": "+", "isAction": true },
     { "id": 12, "number": "-", "isAction": true },
     { "id": 13, "number": "*", "isAction": true },
-    { "id": 14, "number": "/", "isAction": true },
+    { "id": 14, "number": "÷", "isAction": true },
     { "id": 15, "number": "=", "isAction": true, "isEquals": true },
     { "id": 16, "number": "C", "isAction": true, "isClear": true }
 ]
