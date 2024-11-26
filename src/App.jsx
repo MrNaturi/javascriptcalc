@@ -36,8 +36,10 @@ function App() {
       }
     }
 
- const finalResult =  tokens[0];
-    const trimmedResult = parseFloat(finalResult.toString().slice(0, 9));
+    const finalResult =  tokens[0];
+    const trimmedResult = parseFloat(finalResult.toString().replace('.', '').slice(0, 9)) / 
+    Math.pow(10, Math.max(0, finalResult.toString().split('.')[1]?.length || 0));
+
   return trimmedResult;
   }
 
