@@ -36,7 +36,7 @@ function App() {
       }
     }
 
-  finalResult =  tokens[0];
+ const finalResult =  tokens[0];
     const trimmedResult = parseFloat(finalResult.toString().slice(0, 9));
   return trimmedResult;
   }
