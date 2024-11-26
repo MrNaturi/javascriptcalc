@@ -9,6 +9,7 @@
     { "id": 8, "number": "8", "isAction": false },
     { "id": 9, "number": "9", "isAction": false },
     { "id": 10, "number": "0", "isAction": false },
+    { "id": 17, "number": ".", "isAction": false },
     { "id": 11, "number": "+", "isAction": true },
     { "id": 12, "number": "-", "isAction": true },
     { "id": 13, "number": "*", "isAction": true },
