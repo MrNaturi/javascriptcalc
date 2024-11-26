@@ -10,7 +10,7 @@ const Button = ({ number, onClick, isAction, isClear }) => {
     }
     
     if (isClear) {
-      actionStyles = 'bg-red-600 hover:bg-red-500 text-white';
+      actionStyles = 'bg-red-600 hover:bg-red-500 text-white w-fulll';
     }
   } else {
     actionStyles = 'bg-gray-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition';
